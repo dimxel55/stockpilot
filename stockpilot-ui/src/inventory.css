@@ -1,0 +1,154 @@
+
+.inventory-page {
+  display: grid;
+  gap: 22px;
+}
+
+.inventory-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.inventory-heading h1 {
+  margin: 5px 0;
+}
+
+.inventory-heading p,
+.inventory-toolbar p {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.warehouse-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  background: #20212b;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.inventory-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.inventory-stat {
+  display: grid;
+  gap: 12px;
+  padding: 19px;
+  background: #191a22;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.inventory-stat span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.inventory-stat strong {
+  font-size: 25px;
+}
+
+.inventory-stat .low-number {
+  color: #eab65c;
+}
+
+.inventory-stat .out-number {
+  color: #ef7777;
+}
+
+.inventory-panel {
+  padding: 22px;
+}
+
+.inventory-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.inventory-toolbar h2 {
+  font-size: 15px;
+}
+
+.inventory-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.inventory-filters .search-box {
+  flex: 1;
+}
+
+.inventory-filters select {
+  min-width: 135px;
+  padding: 10px;
+  background: #20212b;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: #e8e9ef;
+  font-size: 11px;
+}
+
+.inventory-product-sku {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.inventory-status {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-good {
+  background: #263a2c;
+  color: #9bdda7;
+}
+
+.status-low {
+  background: #403522;
+  color: #f1c36e;
+}
+
+.status-out {
+  background: #432929;
+  color: #f18b8b;
+}
+
+@media (max-width: 900px) {
+  .inventory-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inventory-filters {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .inventory-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inventory-filters {
+    flex-direction: column;
+  }
+
+  .inventory-filters select {
+    width: 100%;
+  }
+}
